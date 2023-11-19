@@ -1,0 +1,1 @@
+default_text4 = """can you show me the distribution of total social media followers across different regions"""
