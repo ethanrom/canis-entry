@@ -14,6 +14,9 @@ def app_intro():
     <h3 style='color: #777;'>Academic Exploration:</h3>
     <p style='font-size: 16px; color: #555;'>This experimental approach reflects our commitment to exploring the evolving landscape of Language Models in the context of data analytics. By fusing natural language capabilities with data visualization, we aim to push the boundaries of innovation in this rapidly advancing field.</p>
 
+    <h3 style='color: #777;'>Dataset Information:</h3>
+    <p style='font-size: 16px; color: #555;'>Our application leverages the CANIS dataset, which can be accessed [here](https://www.kaggle.com/datasets/26d46af7be53af51e042cf9abc377731d0d53faec0a4cf713ffbf5dca3c364dc). Explore the rich data provided by the dataset to uncover meaningful insights and patterns.</p>
+
     <h3 style='color: #777;'>Get Started:</h3>
     <p style='font-size: 16px; color: #555;'>Embark on the NLP-driven data visualization journey by entering your queries in natural language. Switch to the chatbot tab to interact with our conversational AI and uncover hidden patterns in the data. The CANIS hackathon provides a platform for showcasing the experimental and academic dimensions of our innovative approach to data exploration and visualization.</p>
     </div>
