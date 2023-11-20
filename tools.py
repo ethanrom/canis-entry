@@ -84,7 +84,7 @@ zeroshot_tools = [
     Tool(
         name="smalltalk",
         func=get_chatresponse,
-        description="Use this tool to create a response to user inputs not realted to the dataset. Input to this tool is the User Input you need to repond to. Example: Hello, Thank you",
+        description="Use this tool to create a response to smalltalk user inputs. Input to this tool is the User Input you need to repond to. Example: Hello, Thank you",
         return_direct=True,
     ),
     Tool(
