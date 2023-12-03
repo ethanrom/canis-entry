@@ -6,6 +6,7 @@ from agent_chain import get_agent_chain
 from default_text import default_text4
 from generate_plot import generate_plot, retry_generate_plot
 from markup import app_intro, how_use_intro
+from modules import replace_default_dataset, save_uploaded_dataset
 
 
 if 'error' not in st.session_state:
@@ -26,12 +27,23 @@ def tab1():
 
     st.write(github_link + '&nbsp;&nbsp;&nbsp;' + huggingface_link, unsafe_allow_html=True)
     
-    st.markdown("<p style='font-size: 14px; color: #777;'>Disclaimer: This app is a proof-of-concept and may not be suitable for real-world legal or policy decisions.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size: 14px; color: #777;'>Disclaimer: This app is a proof-of-concept and may not be suitable for real-world decisions.</p>", unsafe_allow_html=True)
+
 
 
 def tab2():
 
     openai_api_key = st.text_input("Enter your OpenAI API key:", type='password')
+
+    dataset_option = st.radio("Select Dataset Option", ("Default", "Upload"))
+    
+    if dataset_option == "Default":
+        if st.button("Use Default Dataset"):
+            replace_default_dataset()
+    else:
+        uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+        if uploaded_file:
+            save_uploaded_dataset(uploaded_file)
 
     st.header("🗣️ Chat")
 
@@ -56,7 +68,7 @@ def tab2():
                     answer = response['output']
                     st.markdown(answer)
         else:
-            st.warning("Please Enter Your Openai API Key First")
+            st.warning("Please Enter Your OpenAI API Key First")
     
     if st.sidebar.button("Clear Chat History"):
         memory_storage.clear()
@@ -64,6 +76,16 @@ def tab2():
 
 def tab3():
     openai_api_key = st.text_input("Enter your OpenAI API key:", type='password')
+
+    dataset_option = st.radio("Select Dataset Option", ("Default", "Upload"))
+    
+    if dataset_option == "Default":
+        if st.button("Use Default Dataset"):
+            replace_default_dataset()
+    else:
+        uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+        if uploaded_file:
+            save_uploaded_dataset(uploaded_file)
 
     st.header("📊 Data Visualization with NLP 🚀")
     st.markdown(
@@ -117,7 +139,7 @@ def tab3():
         except Exception as e:
             st.error(f"Error executing generated code: {str(e)}")
 
-        st.code(result2, language="python") 
+        st.code(result2, language="python")  
 
 def main():
     st.set_page_config(page_title="Demo collection", page_icon=":memo:", layout="wide")

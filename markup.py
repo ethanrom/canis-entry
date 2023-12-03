@@ -2,7 +2,7 @@ def app_intro():
     return """
     <div style='text-align: left; padding: 20px; border-radius: 10px;'>
     <h1 style='text-align: center; color: #333;'>📊 NaturalViz: NLP-Driven Data Visualization 🚀</h1>
-    <h2 style='text-align: center; color: #666;'>Hackathon Entry for CANIS Data Visualization and Foreign Interferences</h2>
+    <h2 style='text-align: center; color: #666;'>Hackathon Entry and Proof of Concept Demo</h2>
             
     <p style='font-size: 18px; color: #444;'>Welcome to NaturalViz, an experimental foray into leveraging Language Models (LLMs) for data exploration and visualization. This app is our entry for the CANIS Data Visualization and Foreign Interference hackathon, showcasing the cutting-edge intersection of natural language understanding and data analytics.</p>
 
@@ -15,12 +15,13 @@ def app_intro():
     <p style='font-size: 16px; color: #555;'>This experimental approach reflects our commitment to exploring the evolving landscape of Language Models in the context of data analytics. By fusing natural language capabilities with data visualization, we aim to push the boundaries of innovation in this rapidly advancing field.</p>
 
     <h3 style='color: #777;'>Dataset Information:</h3>
-    <p style='font-size: 16px; color: #555;'>Our application leverages the CANIS dataset, which can be accessed <a href='https://www.kaggle.com/datasets/26d46af7be53af51e042cf9abc377731d0d53faec0a4cf713ffbf5dca3c364dc' target='_blank'>here</a>. Explore the rich data provided by the dataset to uncover meaningful insights and patterns.</p>
+    <p style='font-size: 16px; color: #555;'>Our application leverages the CANIS dataset, which can be accessed [here](https://www.kaggle.com/datasets/26d46af7be53af51e042cf9abc377731d0d53faec0a4cf713ffbf5dca3c364dc). Explore the rich data provided by the dataset to uncover meaningful insights and patterns.</p>
 
     <h3 style='color: #777;'>Get Started:</h3>
     <p style='font-size: 16px; color: #555;'>Embark on the NLP-driven data visualization journey by entering your queries in natural language. Switch to the chatbot tab to interact with our conversational AI and uncover hidden patterns in the data. The CANIS hackathon provides a platform for showcasing the experimental and academic dimensions of our innovative approach to data exploration and visualization.</p>
     </div>
     """
+
 
 def how_use_intro():
     return """

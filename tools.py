@@ -78,19 +78,19 @@ zeroshot_tools = [
     Tool(
         name="answer_qa",
         func=csv_agnet,
-        description="Use this tool to query the dataset. input to this tool should be a standalone question. Include the correct row titles that are needed. Example: How many rows are there in the dataset, which Facebook page has the highest Facebook Follower #",
+        description="Use this tool to query the dataset. input to this tool should be a standalone question. Include the correct row titles that are needed. Example Input format: How many rows are there in the dataset, which Facebook page has the highest Facebook Follower #",
         #return_direct=True,
     ),
     Tool(
         name="smalltalk",
         func=get_chatresponse,
-        description="Use this tool to create a response to smalltalk user inputs. Input to this tool is the User Input you need to repond to. Example: Hello, Thank you",
+        description="Use this tool to create a response to user inputs not realted to the dataset. Input to this tool is the User Input you need to repond to. Example: Hello, Thank you",
         return_direct=True,
     ),
     Tool(
         name="create_simple_plot",
         func=parsing_input,
-        description="""Use this tool to create x vs y plots. input is a comma seperated list of selected_option, x_column, y_column
+        description="""Use this tool if the user asks to create x vs y plots. input is a comma seperated list of selected_option, x_column, y_column
         Example Inputs: 
         bar,Name (English),X (Twitter) Follower #
         line,Parent entity (English),Facebook Follower #
